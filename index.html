@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/stylePage.css">
+    <link rel="stylesheet" href="style/object.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/projects.css">
+    <link rel="stylesheet" href="style/biography.css">
+    <link rel="stylesheet" href="style/form.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <script src="https://kit.fontawesome.com/1db60168e0.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Portfólio - FUTEBOL WORLD </title>
+    <meta name="author" content="Marcos Vinicius Candido Pavani">
+    <meta name="description" content="Portfolio - Futbol WORLD">
+    <meta name="keywords" content="Portfolio, Developer, Football">
+    <link rel="icon" type="image/png" href="M-removebg-preview.png"/>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-image: url('media/img/icons/football.png');
+            background-size: cover;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            background: #1e1e1e;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .biography-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            text-align: center;
+        }
+
+        .icon {
+            width: 300px; 
+            height: auto;
+        }
+
+        .project-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #2c2c2c;
+            border-radius: 5px;
+        }
+
+        .btn-toggle {
+            cursor: pointer;
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: #ffee00;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #000000;
+        }
+    </style>
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img class="logo header-logo" src="media/img/neymar.png" alt="Logo">
+        <h2 id="title-header" class="header" data-value="FUTEBOL WORLD">FUTEBOL WORLD</h2>
+        <nav class="header">
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#projects">PROJECTOS</a></li>
+                <li><a href="#biography">BIOGRAFIA</a></li>
+                <li><a href="#contact">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <div id="home">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="container">
+              <div class="left">
+                <h1>FUTEBOL.</h1><h1>TECNOLOGIA.</h1><h1>PASSIONE.</h1>
+                <p>Construindo um time de código, um gol de cada vez.</p>
+              </div>
+              <div class="right">
+                <div class="ball"></div>
+              </div>
+            </div>
+            <ul>
+                <li><img class="icon area-1" src="media/img/champions-removebg-preview.png" alt="Champions League"></li>
+                <li><img class="icon area-1" src="media/img/champions-removebg-preview.png" alt="Champions League"></li>
+                <li><img class="icon area-1" src="media/img/champions-removebg-preview.png" alt="Champions League"></li>
+            </ul>
+        </div>
+        <div id="projects">
+          <div class="wave-reverse"></div>
+          <div class="wave-reverse"></div>
+          <div class="wave-reverse"></div>
+
+          <div class="text area-2">
+            <div class="wrapper">
+              <div id="F" class="letter">F</div>
+              <div class="shadow">F</div>
+            </div>
+            <div class="wrapper">
+              <div id="U" class="letter">U</div>
+              <div class="shadow">U</div>
+            </div>
+            <div class="wrapper">
+              <div id="T" class="letter">T</div>
+              <div class="shadow">T</div>
+            </div>
+            <div class="wrapper">
+              <div id="E" class="letter">E</div>
+              <div class="shadow">E</div>
+            </div>
+            <div class="wrapper">
+              <div id="B" class="letter">B</div>
+              <div class="shadow">B</div>
+            </div>
+            <div class="wrapper">
+              <div id="O" class="letter">O</div>
+              <div class="shadow">O</div>
+            </div>
+            <div class="wrapper">
+              <div id="L" class="letter">L</div>
+              <div class="shadow">L</div>
+            </div>
+          </div>   
+
+          <div class="projects-container">
+              <div class="project-card">
+                <h1>Simulador de Penaltis</h1>
+                <p>Um jogo interativo que simula a pressão de cobrar um pênalti em uma partida de futebol.</p>
+                <button class="btn-toggle" onclick="toggleDetails('penaltis-details')">DETALHES</button>
+                <div id="penaltis-details" class="project-details">
+                  <h2>Descrição do Projeto</h2>
+                  <p>Um jogo onde o jogador escolhe a direção do chute em um pênalti e enfrenta goleiros com habilidades variadas.</p>
+                  <h2>Funcionalidades</h2>
+                  <ul>
+                      <li>Escolha entre diferentes goleiros</li>
+                      <li>Estatísticas de desempenho</li>
+                      <li>Feedback em tempo real sobre a cobrança</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="project-card">
+                <h1>Estatísticas de Jogadores</h1>
+                <p>Uma aplicação que compila e analisa dados de jogadores de futebol ao redor do mundo.</p>
+                <button class="btn-toggle" onclick="toggleDetails('estatisticas-details')">DETALHES</button>
+                <div id="estatisticas-details" class="project-details">
+                  <h2>Descrição do Projeto</h2>
+                  <p>Uma ferramenta para analisar o desempenho de jogadores, coletando dados de partidas e estatísticas relevantes.</p>
+                  <h2>Funcionalidades</h2>
+                  <ul>
+                      <li>Comparação de estatísticas de jogadores</li>
+                      <li>Gráficos de desempenho</li>
+                      <li>Exportação de dados em formatos variados</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="project-card">
+                <h1>Gerador de perguntas</h1
+                <div class="project-card" style="    margin: auto;
+                text-align: center;
+                width: 50%;"div>
+                  <h1>Gerador de perguntas</h1>
+                  <p>As ajudam a entender mais sobre o mundo do futebol.</p>
+                  <button class="btn-toggle" onclick="toggleTacticsGame()">DETALHES</button>
+                  <div id="tactics-details" class="project-details" style="display: block;text-align: center;width: 100%;">
+                    <h2>Questões sobre Futebol</h2>
+                    <p>Responda às perguntas abaixo:</p>
+                    <ul class="questions-container" style="text-align: center;margin: 0;padding: 0;">
+                        <li class="question-item">1. Qual é o jogador com mais gols na história da Copa do Mundo?
+                            <input type="text" id="q1">
+                        </li>
+                        <li class="question-item">2. Qual país sediou a Copa do Mundo de 2014?
+                            <input type="text" id="q2">
+                        </li>
+                        <li class="question-item">3. Qual clube é conhecido como "Os Merengues"?
+                            <input type="text" id="q3">
+                        </li>
+                        <li class="question-item">4. Qual é o melhor jogador do mundo"?
+                          <input type="text" id="q4">
+                    </li>
+                    <li class="question-item">5. Qual é o jogador que foi coroado a melhor do mundo"?
+                      <input type="text" id="q5"> 
+                    </li>
+                    <li class="question-item">6. Qual é o jogador de futebol que tem 8 bolas de ouro"?
+                        <input type="text" id="q6">
+                      </li>
+                      <li class="question-item">7. Quantos anos neymar tem"?
+                          <input type="text" id="q7">
+                        </li>
+                        <li class="question-item">8. Qual é o jogador com mais titulos na carreira"?
+                            <input type="text" id="q8">
+                          </li>
+                          <li class="question-item">9. Qual é o país com mais títulos da Copa do Mundo FIFA"?
+                              <input type="text" id="q9">
+                            </li>
+                            <li class="question-item">10. Qual clube que tém o maior número de títulos da UEFA Champions League "?
+                                <input type="text" id="q10">
+                  </ul>
+                    <button onclick="checkAnswers()">Enviar Respostas</button>
+                    <div id="results" style="display: none;"></div>
+              </div>
+              <script>
+                  function toggleTacticsGame() {
+                      const details = document.getElementById('tactics-details');
+                      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+                  }
+              
+                  function checkAnswers() {
+                      const answers = {
+                          q1: 'Miroslav Klose', // or the correct answer you want
+                          q2: 'Brasil',
+                          q3: 'Real Madrid',
+                          q4: 'Cristiano Ronaldo',
+                          q5:'pelé',
+                          q6:'messi',
+                          q7:'32',
+                          q8:'messi',
+                          q9:'brasil',
+                          q10:'real madrid'
+                      };
+                      
+                      let score = 0;
+                      for (let key in answers) {
+                          const userAnswer = document.getElementById(key).value.trim();
+                          if (userAnswer.toLowerCase() === answers[key].toLowerCase()) {
+                              score++;
+                          }
+                      }
+              
+                      const resultDiv = document.getElementById('results');
+                      resultDiv.style.display = 'block';
+                      resultDiv.innerHTML = `Você acertou ${score} de 10 perguntas!`;
+                  }
+              </script>              
+                <button class="btn
